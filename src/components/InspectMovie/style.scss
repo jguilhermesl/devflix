@@ -1,0 +1,124 @@
+.inspectMovie {
+    width: 100%;
+    padding-top: 5rem;
+    background: #000;
+    color: #fff;
+    position: relative;
+    height: 100vh;
+
+    .infoMovie {
+        width: 90%;
+        z-index: 2;
+        margin: 4rem auto;
+        display: flex;
+        padding: 0 3rem;
+        gap: 3rem;
+
+        img {
+            width: 250px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .containerInfosMovie {
+            padding-right: 11rem;
+
+            span {
+                text-transform: uppercase;
+                letter-spacing: 4.2px;
+                font-size: 0.8rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                font-weight: 800;
+                margin-top: 0.6rem;
+            }
+
+            .infos {
+                margin-top: 0.6rem;
+                display: flex;
+                justify-content: space-between;
+                width: 400px;
+
+                span {
+                    letter-spacing: 2px;
+                }
+
+                .trailer {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                    z-index: 10;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .genres {
+                display: flex;
+                gap: 1rem;
+                margin: 1rem 0;
+                span {
+                    letter-spacing: normal;
+                    font-weight: 700;
+                    z-index: 22;
+                    text-transform: inherit;
+                    padding: 0.3rem 1rem;
+                    background: rgba(88, 86, 86, 0.25);
+                    border-radius: 50px;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                gap: 1rem;
+                z-index: 22;
+                margin-top: 1rem;
+
+                button {
+                    z-index: 22;
+                    padding: 1rem 3rem;
+                    background: rgba(88, 86, 86, 0.25);
+                    border: none;
+                    border-radius: 50px;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.3rem;
+                }
+            }
+
+            p {
+                margin-top: 1.2rem;
+                font-size: 0.9rem;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .imgBanner {
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        right: 0rem;
+        z-index: 1;
+        opacity: 0.1;
+    }
+
+    .loading {
+        position: absolute;
+        top: 15rem;
+        left: 0rem;
+        right: 0rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
