@@ -1,0 +1,71 @@
+.favorites {
+    padding: 7rem 10rem 0 10rem;
+    background: #000;
+    color: #fff;
+    height: 100vh;
+
+    .allMoviesFavorite {
+        background: #191220;
+        width: 100%;
+        border-radius: 20px;
+        height: auto;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+    }
+
+    .card {
+        width: 150px;
+        border-radius: 10px;
+        position: relative;
+        height: 220px;
+        cursor: pointer;
+        transition: 0.4s;
+    
+        img {
+            width: 100%;
+            border-radius: 10px;
+            opacity: 0.5;
+            height: 100%;
+        }
+    
+        p {
+            position: absolute;
+            bottom: 4rem;
+            left: 0.5rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+    
+        .voto {
+            position: absolute;
+            bottom: 2.8rem;
+            left: 0.5rem;
+            display: flex;
+            font-weight: 700;
+            font-size: 0.6rem;
+            justify-content: space-between;
+            margin-top: 10px;
+            color: rgb(219, 200, 200);
+            width: 132px;
+    
+            span {
+                font-weight: 700;
+                font-size: 0.7rem;
+            }
+        }
+    
+        &:hover {
+            transform: scale(1.05);
+            border-radius: 10px;
+            opacity: 0.5;
+        }
+    }
+}

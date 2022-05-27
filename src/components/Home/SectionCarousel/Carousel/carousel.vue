@@ -7,7 +7,7 @@
           slidesPerView: 1,
           spaceBetween: 30,
         },
-        '450': {
+        '550': {
           slidesPerView: 2,
           spaceBetween: 30,
         },
@@ -15,11 +15,11 @@
           slidesPerView: 3,
           spaceBetween: 30,
         },
-        '768': {
-          slidesPerView: 4,
+        '1208': {
+          slidesPerView: 5,
           spaceBetween: 30,
         },
-        '1024': {
+        '1504': {
           slidesPerView: 7,
           spaceBetween: 60,
         },

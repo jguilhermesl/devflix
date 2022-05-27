@@ -44,8 +44,7 @@ export default {
       const data = await api.get(
         `/movie/popular?api_key=d11262ba9a25a972aae056ee15f2dff9&language=en-US`
       );
-      console.log(data.data.results);
-      this.arrayMovies = data.data.results;
+      this.arrayMovies = data.data.results
     },
   },
   mounted() {

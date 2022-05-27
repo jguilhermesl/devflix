@@ -1,7 +1,8 @@
 import  { createRouter, createWebHistory } from 'vue-router'
 
 import HomeView from '../views/HomeView.vue'
-import InspectMovie from '../views/InspectMovieView.vue'
+import InspectMovieView from '../views/InspectMovieView.vue'
+import FavoritesView from '../views/FavoritesView.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -13,9 +14,15 @@ const router = createRouter({
         },
         {
             path: '/movies/:id',
-            name: InspectMovie,
-            component: InspectMovie
-        }
+            name: InspectMovieView,
+            component: InspectMovieView
+        },
+        {
+            path: '/favorites',
+            name: FavoritesView,
+            component: FavoritesView
+        },
+
     ]
 })
 

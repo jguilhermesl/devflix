@@ -30,9 +30,9 @@
             }
 
             h1 {
-                font-size: 2.2rem;
+                font-size: 3.5rem;
                 font-weight: 800;
-                margin-top: 0.6rem;
+                margin: 1.3rem 0;
             }
 
             .infos {
@@ -91,11 +91,16 @@
                     align-items: center;
                     gap: 0.3rem;
                 }
+
+                .deslikeButton {
+                    background: var(--red);
+                    transition: 0.3s;
+                }
             }
 
             p {
-                margin-top: 1.2rem;
-                font-size: 0.9rem;
+                margin: 1.7rem 0;
+                font-size: 1rem;
                 line-height: 22px;
             }
         }

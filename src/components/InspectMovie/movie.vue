@@ -25,7 +25,8 @@
         </div>
         <p>{{ movie.overview }}</p>
         <div class="buttons">
-          <button><i class="fa-solid fa-heart"></i> CURTIR</button>
+          <button v-show="movieLiked" @click="saveMovie()"><i class="fa-solid fa-heart"></i> CURTIR</button>
+          <button v-show="movieLiked === false" @click="removeMovie()" class="deslikeButton"><i class="fa-solid fa-heart"></i> DESCURTIR</button>
           <button><i class="fa-solid fa-arrow-pointer"></i> VER SITE</button>
         </div>
       </div>
@@ -50,6 +51,7 @@ export default {
       loading: false,
 
       movie: {},
+      movieLiked: false,
       imagePath: "https://image.tmdb.org/t/p/w500/",
     };
   },
@@ -59,13 +61,51 @@ export default {
       const data = await api.get(
         `https://api.themoviedb.org/3/movie/${this.id}?api_key=d11262ba9a25a972aae056ee15f2dff9&language=en-US`
       );
-      console.log(data.data);
       this.movie = data.data;
       this.loading = false;
+      console.log(data.data)
     },
+    saveMovie() {
+      const myList = localStorage.getItem('favoriteMovies');
+      let savedMovies = JSON.parse(myList) || []
+
+      const hasMovie = savedMovies.some( savedMovie => parseInt(savedMovie.id) === parseInt(this.id))
+
+      if (hasMovie) {
+        console.log('Esse filme já tem, viu?')
+        return 
+      } 
+      
+      savedMovies.push(this.movie)
+      localStorage.setItem('favoriteMovies', JSON.stringify(savedMovies))
+      this.checkedIfMovieWasLike();
+    },
+    checkedIfMovieWasLike(){
+      const myList = localStorage.getItem('favoriteMovies');
+      let savedMovies = JSON.parse(myList) || []
+
+      const hasMovie = savedMovies.some( savedMovie => parseInt(savedMovie.id) === parseInt(this.id))
+
+      if(hasMovie) {
+        this.movieLiked = false
+      } else {
+        this.movieLiked = true
+      }
+    },
+    removeMovie() {
+      const myList = localStorage.getItem('favoriteMovies');
+      let savedMovies = JSON.parse(myList) || []
+
+      console.log(savedMovies)
+      const filterMovies = savedMovies.filter( movie => parseInt(movie.id) !== parseInt(this.id))
+      console.log(filterMovies)
+      localStorage.setItem('favoriteMovies', JSON.stringify(filterMovies))
+      this.checkedIfMovieWasLike();
+    }
   },
   mounted() {
     this.loadApi();
+    this.checkedIfMovieWasLike();
   },
   components: {
     Loading,
