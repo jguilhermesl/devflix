@@ -14,8 +14,8 @@
     </div>
   </div>
   <div class="sectionMovies">
-    <SectionCarousel title="Assistir Filmes Online" contentButtonOne="Novos filmes" contentButtonTwo="Mais assistidos" />
-    <SectionCarousel title="Assistir Séries Online" contentButtonOne="Novas séries" contentButtonTwo="Mais assistidas" />
+    <SectionCarousel title="Assistir Filmes Online" contentButtonOne="Todos os filmes" contentButtonTwo="Mais votados" />
+    <SectionCarousel title="Assistir Séries Online" contentButtonOne="Todos as séries" contentButtonTwo="Mais votadas" />
   </div>
 </template>
 

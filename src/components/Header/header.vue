@@ -28,7 +28,7 @@ export default {
   name: "Header",
   data() {
       return {
-          menuIsActive: false
+          menuIsActive: true
       }
   },
   methods: {

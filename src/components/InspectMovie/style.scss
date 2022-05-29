@@ -29,10 +29,18 @@
                 font-size: 0.8rem;
             }
 
+            .watchMovieTitle {
+                text-align: center;
+            }
+
             h1 {
                 font-size: 3.5rem;
                 font-weight: 800;
                 margin: 1.3rem 0;
+
+                @media only screen and (max-width: 400px) {
+                    font-size: 1.5rem!important;
+                }
             }
 
             .infos {
@@ -63,6 +71,8 @@
                 display: flex;
                 gap: 1rem;
                 margin: 1rem 0;
+                flex-wrap: wrap;
+
                 span {
                     letter-spacing: normal;
                     font-weight: 700;
@@ -104,6 +114,38 @@
                 line-height: 22px;
             }
         }
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 2rem;
+            width: 100%;
+            margin: 4rem 0 0 0 ;
+
+            .containerInfosMovie {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto;
+                padding-right: 0rem;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                .infos {
+                    width: 100%;
+                }
+
+                .genres {
+                    justify-content: center;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+        }
     }
 
     .imgBanner {
@@ -115,6 +157,7 @@
         right: 0rem;
         z-index: 1;
         opacity: 0.1;
+        height: 100%;
     }
 
     .loading {
@@ -122,8 +165,11 @@
         top: 15rem;
         left: 0rem;
         right: 0rem;
-        width: 100%;
         display: flex;
         justify-content: center;
+    }
+
+    @media screen and (max-width:900px) {
+        height: auto;
     }
 }

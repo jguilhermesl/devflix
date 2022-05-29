@@ -3,7 +3,7 @@
     <div class="infoMovie" v-show="loading === false">
       <img :src="imagePath + movie.poster_path" />
       <div class="containerInfosMovie">
-        <span>ASSISTIR {{ movie.title }} ONLINE</span>
+        <span class="watchMovieTitle">ASSISTIR {{ movie.title }} ONLINE</span>
         <h1>{{ movie.title }}</h1>
         <div class="genres">
           <span v-for="genre in movie.genres" v-bind:key="genre.id">{{

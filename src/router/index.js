@@ -3,6 +3,7 @@ import  { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import InspectMovieView from '../views/InspectMovieView.vue'
 import FavoritesView from '../views/FavoritesView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -21,8 +22,7 @@ const router = createRouter({
             path: '/favorites',
             name: FavoritesView,
             component: FavoritesView
-        },
-
+        }
     ]
 })
 
