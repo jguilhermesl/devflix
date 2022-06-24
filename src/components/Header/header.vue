@@ -11,7 +11,6 @@
         <router-link to="/us"><li>Nós</li></router-link>
       </ul>
       <div class="actions">
-        <i class="fa-solid fa-magnifying-glass"></i>
         <router-link to="/favorites"
           ><i class="fa-solid fa-heart"></i> FILMES CURTIDOS</router-link
         >

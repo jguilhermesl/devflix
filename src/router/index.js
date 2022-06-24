@@ -1,4 +1,7 @@
-import  { createRouter, createWebHistory } from 'vue-router'
+import {
+    createRouter,
+    createWebHistory
+} from 'vue-router'
 
 import HomeView from '../views/HomeView.vue'
 import InspectMovieView from '../views/InspectMovieView.vue'
@@ -7,21 +10,25 @@ import NotFoundView from '../views/NotFoundView.vue'
 
 const router = createRouter({
     history: createWebHistory(),
-    routes: [
-        {
+    routes: [{
             path: '/',
-            name: HomeView,
+            name: 'HomeView',
             component: HomeView
         },
         {
             path: '/movies/:id',
-            name: InspectMovieView,
+            name: 'InspectMovieView',
             component: InspectMovieView
         },
         {
             path: '/favorites',
-            name: FavoritesView,
+            name: 'FavoritesView',
             component: FavoritesView
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'NotFoundView',
+            component: NotFoundView
         }
     ]
 })
