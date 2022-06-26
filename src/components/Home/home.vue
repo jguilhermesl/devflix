@@ -26,30 +26,9 @@ import SectionCarousel from './SectionCarousel/SectionCarousel.vue'
 
 export default {
   name: "Home",
-  data() {
-    return {
-      arrayMovies: [],
-
-      imagePath: "https://image.tmdb.org/t/p/w500/"
-    };
-  },
   components: {
     SectionCarousel,
-  },
-  props: {
-    msg: String,
-  },
-  methods: {
-    async loadApi() {
-      const data = await api.get(
-        `/movie/popular?api_key=d11262ba9a25a972aae056ee15f2dff9&language=en-US`
-      );
-      this.arrayMovies = data.data.results
-    },
-  },
-  mounted() {
-    this.loadApi();
-  },
+  }
 };
 </script>
 

@@ -37,6 +37,7 @@ O site tem no total 4 views, sendo elas:
 - [x] Listando filmes da API no Carrossel
 - [x] Criação Página de Inspeção de filme
 - [x] Resgate do ID do produto pela URL e listando informações do filme
+- [x] Filtros "Mais novos", "Mais votados" e "Mais populares"
 - [x] Opção de curtir e descurtir o filme e guardando informação no localStorage
 - [x] Página Favoritos
 - [x] Resgate dos filmes favoritos no localStorage
